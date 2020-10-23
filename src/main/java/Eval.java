@@ -16,7 +16,7 @@ public class Eval {
     static String str;
 
     /**
-     * Getter-method will
+     * Getter-method
      * @return current str from field
      */
     static public String getStr() {
@@ -108,6 +108,7 @@ public class Eval {
      * Selects a number or function and converts it to double
      * Recursively accesses the method parseExpression()
      * @return x - the final value of the expression
+     * @throws RuntimeException if function or char is unknown
      */
     static double parseFactor() {
         if (eat('+')) return parseFactor(); //unary plus
